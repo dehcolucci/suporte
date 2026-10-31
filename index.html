@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suporte Remoto | André Colucci – Soluções em Informática</title>
+<meta name="description" content="Suporte remoto André Colucci – Soluções em Informática. Baixe, abra e informe o ID e a senha ao técnico.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='96' fill='%231FB5E9'/%3E%3Ccircle cx='100' cy='100' r='84' fill='%23111'/%3E%3Cpath d='M138 68A50 50 0 1 0 138 132' fill='none' stroke='%231FB5E9' stroke-width='22' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#141414; --black-2:#1d1d1f; --cyan:#1fb5e9; --cyan-dark:#0e98c9;
+    --white:#ffffff; --gray:#eef1f4; --text:#141414; --muted:#5d646d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--white)}
+  body{font-family:Poppins,system-ui,Segoe UI,Arial,sans-serif;color:var(--text);line-height:1.55;overflow-x:hidden}
+  a{color:inherit}
+
+  /* ---------- HERO (inspirado no cartão: lado escuro + lado claro em diagonal) ---------- */
+  .hero{position:relative;min-height:100vh;display:grid;grid-template-columns:44% 56%}
+  .hero-dark{position:relative;background:var(--black);clip-path:polygon(0 0,100% 0,82% 100%,0 100%);display:flex;align-items:center;justify-content:center;padding:40px 16px;z-index:1}
+  .hero-dark::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 60%,rgba(255,255,255,.04) 60%);pointer-events:none}
+  .dots{position:absolute;width:120px;height:90px;background-image:radial-gradient(#5a5a5a 2.2px,transparent 2.4px);background-size:16px 16px;opacity:.9}
+  .dots.tl{top:28px;left:28px}
+  .dots.bl{bottom:28px;left:56px}
+  .dots.cy{background-image:radial-gradient(var(--cyan) 2.2px,transparent 2.4px);width:56px;height:56px;opacity:.85}
+  .logo-big{width:min(340px,70%);height:auto;filter:drop-shadow(0 20px 50px rgba(31,181,233,.25));position:relative;margin-right:14%}
+
+  .hero-light{display:flex;flex-direction:column;justify-content:center;padding:48px 7vw 48px 4vw;position:relative}
+  .hero-light .dots.tr{top:36px;right:36px;background-image:radial-gradient(#1a1a1a 2.2px,transparent 2.4px);width:56px;height:72px}
+  .brand-name{font-size:clamp(2rem,4.2vw,3.2rem);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+  .brand-sub{font-size:clamp(1rem,1.8vw,1.35rem);font-weight:500;margin-top:6px;padding-bottom:14px;border-bottom:3px solid var(--cyan);display:inline-block}
+  .kicker{display:inline-flex;align-items:center;gap:8px;margin-top:34px;font-weight:600;color:var(--cyan-dark);text-transform:uppercase;letter-spacing:.12em;font-size:.82rem}
+  .kicker::before{content:"";width:28px;height:3px;background:var(--cyan);border-radius:3px}
+  h1{font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.2;margin:10px 0 12px;font-weight:700;max-width:560px}
+  .lead{color:var(--muted);max-width:520px;margin-bottom:28px}
+
+  .btn{display:inline-flex;align-items:center;gap:12px;background:var(--cyan);color:var(--white);text-decoration:none;font-weight:700;font-size:1.08rem;padding:17px 32px;border-radius:999px;box-shadow:0 14px 30px -12px var(--cyan);transition:.18s;align-self:flex-start}
+  .btn:hover{background:var(--cyan-dark);transform:translateY(-2px)}
+  .btn svg{width:22px;height:22px}
+  .btn-note{font-size:.85rem;color:var(--muted);margin-top:12px}
+
+  .contacts{display:flex;flex-direction:column;gap:10px;margin-top:34px;max-width:360px}
+  .pill{display:flex;align-items:center;gap:12px;background:var(--gray);border-radius:999px;padding:4px 18px 4px 4px;text-decoration:none;font-weight:500;font-size:.95rem;transition:.15s}
+  .pill:hover{background:#e2e7ec}
+  .pill .ic{width:34px;height:34px;border-radius:50%;background:var(--black);display:grid;place-items:center;flex:none}
+  .pill .ic svg{width:17px;height:17px;fill:var(--white)}
+
+  /* ---------- PASSOS ---------- */
+  .steps-wrap{background:var(--black);color:var(--white);padding:72px 16px;position:relative;overflow:hidden}
+  .steps-wrap .dots{background-image:radial-gradient(#3c3c3c 2.2px,transparent 2.4px)}
+  .steps-wrap .dots.r{right:30px;top:30px}
+  .container{max-width:1040px;margin:0 auto;position:relative}
+  .section-title{text-align:center;font-size:clamp(1.5rem,3vw,2rem);font-weight:700}
+  .section-title span{color:var(--cyan)}
+  .section-sub{text-align:center;color:#a9afb6;margin:8px auto 40px;max-width:560px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .step{background:var(--black-2);border:1px solid #2a2a2c;border-radius:20px;padding:26px;position:relative}
+  .num{width:46px;height:46px;border-radius:50%;border:3px solid var(--cyan);color:var(--cyan);display:grid;place-items:center;font-weight:800;font-size:1.1rem;margin-bottom:16px}
+  .step h3{font-size:1.1rem;margin-bottom:6px}
+  .step p{color:#b5bbc2;font-size:.94rem}
+  .step strong{color:var(--white)}
+
+  .notice{margin-top:22px;border:1px solid #2a2a2c;border-left:4px solid var(--cyan);border-radius:14px;padding:18px 22px;background:var(--black-2)}
+  .notice h4{margin-bottom:6px}
+  .notice ul{padding-left:18px;color:#b5bbc2;font-size:.93rem}
+  .notice li{margin:3px 0}
+
+  footer{padding:26px 16px;text-align:center;font-size:.88rem;color:var(--muted)}
+  footer .social{display:flex;justify-content:center;gap:14px;margin-bottom:10px}
+  footer .social a{width:38px;height:38px;border-radius:50%;background:var(--gray);display:grid;place-items:center;transition:.15s}
+  footer .social a:hover{background:var(--cyan)}
+  footer .social svg{width:18px;height:18px;fill:var(--black)}
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero-dark{clip-path:polygon(0 0,100% 0,100% 82%,0 100%);padding:56px 16px 80px}
+    .logo-big{width:190px;margin-right:0}
+    .dots.bl{display:none}
+    .hero-light{padding:28px 16px 48px}
+    .hero-light .dots.tr{display:none}
+    .btn{align-self:stretch;justify-content:center}
+    .contacts{max-width:none}
+    .steps{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-dark">
+    <div class="dots tl"></div>
+    <div class="dots bl"></div>
+    <!-- Logo C com anéis concêntricos -->
+    <svg class="logo-big" viewBox="0 0 200 200" aria-label="Logo André Colucci Soluções em Informática">
+      <circle cx="100" cy="100" r="97" fill="#1FB5E9"/>
+      <circle cx="100" cy="100" r="88" fill="#141414"/>
+      <circle cx="100" cy="100" r="78" fill="none" stroke="#1FB5E9" stroke-width="5" stroke-dasharray="380 110" transform="rotate(-20 100 100)"/>
+      <circle cx="100" cy="100" r="66" fill="none" stroke="#1FB5E9" stroke-width="3" opacity=".55" stroke-dasharray="300 115" transform="rotate(160 100 100)"/>
+      <path d="M134 72A44 44 0 1 0 134 128" fill="none" stroke="#1FB5E9" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="100" cy="100" r="12" fill="#1FB5E9"/>
+    </svg>
+  </div>
+
+  <div class="hero-light">
+    <div class="dots tr"></div>
+    <div>
+      <div class="brand-name">André Colucci</div>
+      <div class="brand-sub">Soluções em Informática</div>
+    </div>
+
+    <div class="kicker">Suporte Remoto</div>
+    <h1>Atendimento técnico direto no seu computador</h1>
+    <p class="lead">Baixe o programa, abra e informe o <strong>ID</strong> e a <strong>senha</strong> que aparecem na tela. Não precisa instalar nada.</p>
+
+    <!-- suporte.exe no repositório; o atributo download salva com o nome que contém a configuração do servidor -->
+    <a class="btn" href="suporte.exe" download="rustdesk-host=200.205.151.98,key=Ig6UtofqJG5XjmaO8EwYjrwQaMITqzc1+pH6TjeBmg0=.exe">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      Baixar Suporte Remoto
+    </a>
+    <div class="btn-note">Para Windows • Conexão criptografada ponta a ponta</div>
+
+    <div class="contacts">
+      <a class="pill" href="https://wa.me/5515991365657?text=Ol%C3%A1%20Andr%C3%A9%2C%20preciso%20de%20suporte%20remoto." target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.3L2 22l4.8-1.2A11 11 0 1 0 20.5 3.5Zm-8.5 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3A9 9 0 1 1 12 20.5Zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a7.4 7.4 0 0 1-3.7-3.2c-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.4l-.9-2c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.1.2-1.3l-.4-.2Z"/></svg></span>
+        (15) 99136-5657
+      </a>
+      <a class="pill" href="mailto:andre@coluccinfo.com.br">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.2L3.6 7v.3L12 13l8.4-5.7V7L12 12.2Z"/></svg></span>
+        andre@coluccinfo.com.br
+      </a>
+      <a class="pill" href="https://www.coluccinfo.com.br" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-3a15.7 15.7 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8ZM12 4a13.6 13.6 0 0 1 1.9 4h-3.8A13.6 13.6 0 0 1 12 4ZM4.3 14a8.2 8.2 0 0 1 0-4h3.4a16.5 16.5 0 0 0 0 4H4.3Zm.8 2h3a15.7 15.7 0 0 0 1.4 3.6A8 8 0 0 1 5.1 16Zm3-8h-3a8 8 0 0 1 4.4-3.6A15.7 15.7 0 0 0 8.1 8ZM12 20a13.6 13.6 0 0 1-1.9-4h3.8A13.6 13.6 0 0 1 12 20Zm2.3-6H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4Zm.2 5.6a15.7 15.7 0 0 0 1.4-3.6h3a8 8 0 0 1-4.4 3.6Zm1.8-5.6a16.5 16.5 0 0 0 0-4h3.4a8.2 8.2 0 0 1 0 4h-3.4Z"/></svg></span>
+        www.coluccinfo.com.br
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="steps-wrap">
+  <div class="dots r"></div>
+  <div class="container">
+    <h2 class="section-title">Como funciona em <span>3 passos</span></h2>
+    <p class="section-sub">Rápido, seguro e sem instalação. O acesso só acontece com a sua autorização.</p>
+
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Baixe</h3><p>Clique em <strong>Baixar Suporte Remoto</strong>. Se o navegador avisar, clique em <strong>Manter</strong>.</p></div>
+      <div class="step"><div class="num">2</div><h3>Abra o arquivo</h3><p>Se aparecer "O Windows protegeu o computador", clique em <strong>Mais informações → Executar assim mesmo</strong>.</p></div>
+      <div class="step"><div class="num">3</div><h3>Informe ID e senha</h3><p>Passe ao técnico o <strong>ID</strong> e a <strong>senha</strong> exibidos e aceite a conexão quando solicitado.</p></div>
+    </div>
+
+    <div class="notice">
+      <h4>Importante</h4>
+      <ul>
+        <li>Não é necessário clicar em "Instalar".</li>
+        <li>Se você já baixou antes, apague o arquivo antigo antes de baixar novamente.</li>
+        <li>Ao fechar o programa, o acesso é encerrado.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="social">
+    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.5c0-.8.2-1.3 1.4-1.3H17V2.2C16.7 2.1 15.7 2 14.6 2 12.2 2 10.6 3.4 10.6 6.1V8H8v3.3h2.6V22H14V11.3h2.7L17 8h-3Z"/></svg></a>
+    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4Zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0ZM21.1 8c0-1.6-.4-3-1.6-4.1C18.4 2.8 17 2.4 15.4 2.4c-1.6-.1-6.4-.1-8 0C5.8 2.5 4.4 2.8 3.3 3.9 2.2 5 1.8 6.4 1.8 8c-.1 1.6-.1 6.4 0 8 0 1.6.4 3 1.5 4.1 1.1 1.1 2.5 1.5 4.1 1.6 1.6.1 6.4.1 8 0 1.6-.1 3-.4 4.1-1.6 1.1-1.1 1.5-2.5 1.6-4.1.1-1.6.1-6.4 0-8Z"/></svg></a>
+    <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.9 21H3.3V9h3.6v12ZM5.1 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM21 21h-3.6v-5.8c0-1.4 0-3.2-2-3.2s-2.2 1.5-2.2 3.1V21H9.6V9H13v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5V21Z"/></svg></a>
+  </div>
+  © André Colucci – Soluções em Informática
+</footer>
+
+</body>
+</html>
