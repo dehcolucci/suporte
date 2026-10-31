@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suporte Remoto | Coluccinfo</title>
+<meta name="description" content="Suporte remoto Coluccinfo: baixe o programa, abra e informe o ID e a senha ao técnico.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f7fb; --card:#ffffff; --text:#0f1b2d; --muted:#5b6b82;
+    --brand:#0b5cff; --brand-dark:#0846c4; --accent:#00c2a8; --line:#e3e9f2;
+    --wa:#25d366;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0b1220; --card:#121b2e; --text:#eaf0fa; --muted:#9fb0c8; --line:#22304a; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+  .wrap{max-width:980px;margin:0 auto;padding:0 16px}
+  header{padding:22px 0}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.35rem;letter-spacing:-.02em}
+  .logo-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;color:#fff;font-weight:800}
+  .logo span b{color:var(--brand)}
+  .hero{padding:40px 0 28px;text-align:center}
+  .tag{display:inline-block;background:color-mix(in srgb,var(--brand) 12%,transparent);color:var(--brand);font-weight:600;font-size:.85rem;padding:6px 12px;border-radius:999px;margin-bottom:16px}
+  h1{font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.15;letter-spacing:-.03em;margin-bottom:14px}
+  .hero p{color:var(--muted);font-size:1.08rem;max-width:620px;margin:0 auto 28px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;font-size:1.1rem;padding:18px 34px;border-radius:14px;box-shadow:0 10px 30px -10px var(--brand);transition:.15s}
+  .btn:hover{background:var(--brand-dark);transform:translateY(-2px)}
+  .btn svg{width:22px;height:22px}
+  .small{color:var(--muted);font-size:.88rem;margin-top:12px}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:36px 0}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .num{width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:700;margin-bottom:12px}
+  .step h3{font-size:1.05rem;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:.95rem}
+  .notice{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:18px 20px;margin-bottom:22px}
+  .notice h4{margin-bottom:6px}
+  .notice ul{padding-left:18px;color:var(--muted);font-size:.95rem}
+  .notice li{margin:4px 0}
+  .contact{text-align:center;padding:24px 0 40px}
+  .wa{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:12px}
+  .wa svg{width:20px;height:20px}
+  footer{border-top:1px solid var(--line);padding:20px 0;text-align:center;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="logo"><div class="logo-mark">C</div><span>Coluccin<b>fo</b></span></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="tag">Suporte Remoto</div>
+      <h1>Atendimento técnico direto no seu computador</h1>
+      <p>Baixe o programa, abra e informe ao técnico o <strong>ID</strong> e a <strong>senha</strong> que aparecem na tela. Não precisa instalar nada.</p>
+
+      <!-- O arquivo no repositório se chama suporte.exe; o atributo download salva com o nome que contém a configuração do servidor -->
+      <a class="btn" href="suporte.exe" download="rustdesk-host=200.205.151.98,key=Ig6UtofqJG5XjmaO8EwYjrwQaMITqzc1+pH6TjeBmg0=.exe">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        Baixar Suporte Remoto
+      </a>
+      <div class="small">Para Windows • Conexão criptografada</div>
+    </section>
+
+    <section class="steps">
+      <div class="step"><div class="num">1</div><h3>Baixe</h3><p>Clique no botão acima. Se o navegador avisar, clique em <strong>Manter</strong>.</p></div>
+      <div class="step"><div class="num">2</div><h3>Abra o arquivo</h3><p>Se aparecer "O Windows protegeu o computador", clique em <strong>Mais informações → Executar assim mesmo</strong>.</p></div>
+      <div class="step"><div class="num">3</div><h3>Informe ID e senha</h3><p>Passe ao técnico o <strong>ID</strong> e a <strong>senha</strong> exibidos e aceite a conexão quando solicitado.</p></div>
+    </section>
+
+    <div class="notice">
+      <h4>Importante</h4>
+      <ul>
+        <li>Não é necessário clicar em "Instalar".</li>
+        <li>Se você já baixou antes, apague o arquivo antigo antes de baixar de novo.</li>
+        <li>Ao fechar o programa, o acesso é encerrado.</li>
+      </ul>
+    </div>
+
+    <section class="contact">
+      <!-- Troque 5515XXXXXXXXX pelo seu número com DDI e DDD -->
+      <a class="wa" href="https://wa.me/5515XXXXXXXXX?text=Ol%C3%A1%2C%20preciso%20de%20suporte%20remoto." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.3L2 22l4.8-1.2A11 11 0 1 0 20.5 3.5Zm-8.5 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3A9 9 0 1 1 12 20.5Zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a7.4 7.4 0 0 1-3.7-3.2c-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.4l-.9-2c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.1.2-1.3l-.4-.2Z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© Coluccinfo • Suporte e Tecnologia</div>
+  </footer>
+</body>
+</html>
